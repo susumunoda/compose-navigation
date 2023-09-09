@@ -1,4 +1,4 @@
-package com.susumunoda.compose.compose.compose.navigation
+package com.susumunoda.compose.navigation
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes

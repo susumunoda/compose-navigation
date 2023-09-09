@@ -1,4 +1,4 @@
-package com.susumunoda.compose.compose.compose.navigation
+package com.susumunoda.compose.navigation
 
 import android.content.Context
 import androidx.compose.foundation.layout.WindowInsets

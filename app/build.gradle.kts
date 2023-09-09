@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.susumunoda.compose.compose.compose.navigation"
+    namespace = "com.susumunoda.compose.navigation"
     compileSdk = 34
 
     defaultConfig {
