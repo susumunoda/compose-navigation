@@ -11,7 +11,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
@@ -24,6 +23,14 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.ComposeNavigator
 import androidx.navigation.compose.currentBackStackEntryAsState
 
+private val DEFAULT_ICON_SIZE = 24.dp
+private val DEFAULT_WINDOW_INSETS = WindowInsets(
+    left = 0.dp,
+    top = 0.dp,
+    right = 0.dp,
+    bottom = 8.dp
+)
+
 @Composable
 fun BottomNavigation(
     destinations: List<Destination>,
@@ -31,14 +38,9 @@ fun BottomNavigation(
     context: Context,
     modifier: Modifier = Modifier,
     startDestination: Destination = destinations[0],
-    iconSize: Dp = dimensionResource(R.dimen.icon),
+    iconSize: Dp = DEFAULT_ICON_SIZE,
     fontSize: TextUnit = TextUnit.Unspecified,
-    windowInsets: WindowInsets = WindowInsets(
-        left = 0.dp,
-        top = 0.dp,
-        right = 0.dp,
-        bottom = dimensionResource(R.dimen.padding_small)
-    )
+    windowInsets: WindowInsets = DEFAULT_WINDOW_INSETS
 ) {
     val currentBackStackEntry by navController.currentBackStackEntryAsState()
     val backStackHierarchy = currentBackStackEntry?.destination?.hierarchy
