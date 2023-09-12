@@ -17,5 +17,5 @@ navigation-compose = { group = "androidx.navigation", name = "navigation-compose
 [plugins]
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-dependencyAnalysis = {id = "com.autonomousapps.dependency-analysis", version.ref = "dependency-analysis"}
+dependencyAnalysis = { id = "com.autonomousapps.dependency-analysis", version.ref = "dependency-analysis" }
 
