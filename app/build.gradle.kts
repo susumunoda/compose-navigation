@@ -2,6 +2,22 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlinAndroid)
+    `maven-publish`
+}
+
+val releaseVariant = "release"
+publishing {
+    publications {
+        register<MavenPublication>(releaseVariant) {
+            groupId = "com.susumunoda"
+            artifactId = "compose-navigation"
+            version = "1.0"
+
+            afterEvaluate {
+                from(components[releaseVariant])
+            }
+        }
+    }
 }
 
 android {
@@ -42,6 +58,12 @@ android {
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+    }
+    publishing {
+        singleVariant(releaseVariant) {
+            withSourcesJar()
+            withJavadocJar()
         }
     }
 }
