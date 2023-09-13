@@ -13,6 +13,6 @@ fun FavoritesScreen() {
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
     ) {
-        Text("Favorites screen")
+        Text("This is the favorites screen")
     }
 }

@@ -10,6 +10,7 @@ core-ktx = "1.12.0"
 espresso-core = "3.5.1"
 lifecycle-runtime-ktx = "2.6.2"
 activity-compose = "1.7.2"
+susumunoda-compose-animation = "6f52281543"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -27,6 +28,7 @@ ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+susumunoda-compose-animation = { group = "com.github.susumunoda", name = "compose-animation", version.ref = "susumunoda-compose-animation" }
 
 [plugins]
 androidLibrary = { id = "com.android.library", version.ref = "agp" }

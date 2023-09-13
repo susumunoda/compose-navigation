@@ -13,6 +13,6 @@ fun SearchScreen() {
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
     ) {
-        Text("Search screen")
+        Text("This is the search screen")
     }
 }

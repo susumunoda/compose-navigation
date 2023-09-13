@@ -13,6 +13,6 @@ fun HomeScreen() {
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
     ) {
-        Text("Home screen")
+        Text("This is the home screen")
     }
 }

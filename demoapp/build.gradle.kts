@@ -61,6 +61,7 @@ dependencies {
     implementation(libs.ui.tooling.preview)
     implementation(libs.material3)
     implementation(libs.navigation.compose)
+    implementation(libs.susumunoda.compose.animation)
     implementation(project(":library"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
