@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "ComposeNavigation"
 include(":library")
+include(":demoapp")
