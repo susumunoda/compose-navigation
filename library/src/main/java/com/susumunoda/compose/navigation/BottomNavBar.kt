@@ -32,12 +32,12 @@ private val DEFAULT_WINDOW_INSETS = WindowInsets(
 )
 
 @Composable
-fun BottomNavigation(
-    destinations: List<Destination>,
+fun BottomNavBar(
+    destinations: List<BottomNavDestination>,
     navController: NavHostController,
     context: Context,
     modifier: Modifier = Modifier,
-    startDestination: Destination = destinations[0],
+    startDestination: BottomNavDestination = destinations[0],
     iconSize: Dp = DEFAULT_ICON_SIZE,
     fontSize: TextUnit = TextUnit.Unspecified,
     windowInsets: WindowInsets = DEFAULT_WINDOW_INSETS
