@@ -22,6 +22,7 @@ import com.susumunoda.compose.navigation.composableWithoutTransitions
 import com.susumunoda.compose.navigation.demoapp.ui.screen.FavoritesScreen
 import com.susumunoda.compose.navigation.demoapp.ui.screen.HomeScreen
 import com.susumunoda.compose.navigation.demoapp.ui.screen.SearchScreen
+import com.susumunoda.compose.navigation.demoapp.ui.screen.homeNavigation
 import com.susumunoda.compose.navigation.demoapp.ui.screen.settingsNavigation
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -54,9 +55,7 @@ fun RootNavigation(navController: NavHostController = rememberNavController()) {
     ) { contentPadding ->
         Box(Modifier.padding(contentPadding)) {
             NavHost(navController = navController, startDestination = Destination.HOME.route) {
-                composableWithoutTransitions(Destination.HOME.route) {
-                    HomeScreen()
-                }
+                homeNavigation(navController)
                 composableWithoutTransitions(Destination.SEARCH.route) {
                     SearchScreen()
                 }

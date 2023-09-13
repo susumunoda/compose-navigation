@@ -14,4 +14,5 @@
     <string name="setting_two_menu_option_title">View/edit setting 2</string>
     <string name="setting_three_top_bar_title">Setting Three</string>
     <string name="setting_three_menu_option_title">View/edit setting 3</string>
+    <string name="popup_top_bar_title">Popup</string>
 </resources>
