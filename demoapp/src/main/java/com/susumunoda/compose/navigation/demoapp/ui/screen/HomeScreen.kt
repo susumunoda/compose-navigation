@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -38,26 +39,24 @@ fun NavGraphBuilder.homeNavigation(navController: NavHostController) {
 }
 
 @Composable
-fun HomeScreen(navController: NavHostController) {
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
-        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            Text("This is the home screen")
-            Button(onClick = { navController.navigate(Destination.POPUP.route) }) {
-                Text("Open popup")
+fun HomeScreen(navController: NavHostController, modifier: Modifier = Modifier) {
+    Surface(modifier = modifier.fillMaxSize()) {
+        Box(contentAlignment = Alignment.Center) {
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                Text("This is the home screen")
+                Button(onClick = { navController.navigate(Destination.POPUP.route) }) {
+                    Text("Open popup")
+                }
             }
         }
     }
 }
 
 @Composable
-fun PopupScreen() {
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
-        Text("This is the popup screen")
+fun PopupScreen(modifier: Modifier = Modifier) {
+    Surface(modifier = modifier.fillMaxSize()) {
+        Box(contentAlignment = Alignment.Center) {
+            Text("This is the popup screen")
+        }
     }
 }
