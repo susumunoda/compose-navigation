@@ -33,7 +33,6 @@ private val BOTTOM_NAV_DESTINATIONS = listOf(HOME, SEARCH, FAVORITES, SETTINGS)
 fun BottomNavigation(navController: NavHostController) {
     BottomNavBar(
         destinations = BOTTOM_NAV_DESTINATIONS,
-        navController = navController,
-        context = LocalContext.current
+        navController = navController
     )
 }

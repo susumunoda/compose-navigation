@@ -1,6 +1,5 @@
 package com.susumunoda.compose.navigation
 
-import android.content.Context
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
@@ -9,7 +8,6 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -35,7 +33,6 @@ private val DEFAULT_WINDOW_INSETS = WindowInsets(
 fun BottomNavBar(
     destinations: List<BottomNavDestination>,
     navController: NavHostController,
-    context: Context,
     modifier: Modifier = Modifier,
     startDestination: BottomNavDestination = destinations[0],
     iconSize: Dp = DEFAULT_ICON_SIZE,
@@ -44,7 +41,6 @@ fun BottomNavBar(
 ) {
     val currentBackStackEntry by navController.currentBackStackEntryAsState()
     val backStackHierarchy = currentBackStackEntry?.destination?.hierarchy
-    val contextWrapper = remember(context) { ContextWrapper(context) }
 
     NavigationBar(
         modifier = modifier,
@@ -52,8 +48,8 @@ fun BottomNavBar(
     ) {
         destinations.forEach() { destination ->
             val selected = backStackHierarchy?.any { it.route == destination.route } == true
-            val title = contextWrapper.run { stringResource(destination.titleResId) }
-            val iconPainter = contextWrapper.run { painterResource(destination.iconResId) }
+            val title = stringResource(destination.titleResId)
+            val iconPainter = painterResource(destination.iconResId)
 
             NavigationBarItem(
                 label = { Text(title, fontSize = fontSize) },
