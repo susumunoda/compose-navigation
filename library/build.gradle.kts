@@ -9,7 +9,7 @@ val releaseVariant = "release"
 publishing {
     publications {
         register<MavenPublication>(releaseVariant) {
-            groupId = "com.susumunoda"
+            groupId = "com.susumunoda.compose"
             artifactId = "compose-navigation"
             version = "0.1.0"
 
